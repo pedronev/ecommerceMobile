@@ -18,7 +18,7 @@ const Search = () => {
 
   const hadleSearch = async () =>{
     try {
-      const response = await axios.get(`http://192.168.3.33:3000/api/products/search/${searchKey}`)
+      const response = await axios.get(`http://localhost:3000/api/products/search/${searchKey}`)
       setSearchResults(response.data)
     } catch (error) {
       console.log('failed to load products')

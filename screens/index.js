@@ -4,6 +4,7 @@ import Profile from '../screens/Profile';
 import ProductDetails from './ProductDetails';
 import Cart from '../components/cart/Cart';
 import NewArrivals from './NewArrivals';
+import LoginPage from './LoginPage';
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     Profile,
     ProductDetails,
     Cart,
-    NewArrivals
+    NewArrivals,
+    LoginPage
 }

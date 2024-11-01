@@ -4,7 +4,7 @@ import * as SplashScreen from 'expo-splash-screen'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import BottomTabNavigation from './navigation/BottomTabNavigation';
-import { Cart, NewArrivals, ProductDetails } from './screens';
+import { Cart, LoginPage, NewArrivals, ProductDetails } from './screens';
 
 //SplashScreen.preventAutoHideAsync();
 
@@ -37,6 +37,7 @@ export default function App() {
         <Stack.Screen name='Cart' component={Cart} options={{headerShown:false}} />
         <Stack.Screen name='ProductDetails' component={ProductDetails} options={{headerShown:false}} />
         <Stack.Screen name='ProductList' component={NewArrivals} options={{headerShown:false}} />
+        <Stack.Screen name='Login' component={LoginPage} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
 

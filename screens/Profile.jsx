@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import React, { useState } from 'react'
 import styles from './profile.style'
 import { StatusBar } from 'expo-status-bar'
 import { COLORS } from '../constants'
 import { Image } from 'react-native'
 import { TouchableOpacity } from 'react-native'
+import {AntDesign, MaterialCommunityIcons, SimpleLineIcons} from "@expo/vector-icons"
 
 const Profile = ({navigation}) => {
   const [userData, setUserData] = useState(null)
@@ -25,10 +26,10 @@ const Profile = ({navigation}) => {
             source={require('../assets/images/profile.jpeg')}
           />
           <Text style={styles.name}>
-            {userLogin ? userData.name: "please logn "}
+            {userLogin ? userData.name: "Please login "}
           </Text>
           {!userLogin ? (
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
               <View style={styles.loginBtn}>
                 <Text style={styles.menuText}>
                   LOGIN
@@ -37,7 +38,19 @@ const Profile = ({navigation}) => {
             </TouchableOpacity>
           ) : (
             <View style={styles}>
-            
+                <Text style={styles.menuWrapper}>
+                  <TouchableOpacity onPress={() =>{}}>
+                    <View style={styles.menuItem(0.2)}>
+                      <MaterialCommunityIcons 
+                        name='heart-outline'
+                        size={24}
+                        color={COLORS.primary}
+                      />
+                      
+                    </View>
+                    LOGIN@test.com
+                  </TouchableOpacity>
+                </Text>
             </View>
           )}
         </View>

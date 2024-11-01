@@ -40,11 +40,25 @@ const styles = StyleSheet.create({
     menuText:{
         fontFamily: 'regular',
         color: COLORS.gray,
-        marginLeft: 20,
+        marginLeft: 10,
+        marginRight: 10,
         fontWeight: '600',
         fontSize: 14,
         lineHeight: 26
-    }
+    },
+    menuWrapper:{
+        marginTop: SIZES.xLarge,
+        width: SIZES.width-SIZES.large,
+        backgroundColor: COLORS.lightWhite,
+        borderRadius:12
+    },
+    menuItem: (borderBottomWidth)=> ({
+        borderBottomWidth: borderBottomWidth,
+        paddingVertical: 15,
+        paddingHorizontal: 30,
+        borderColor: COLORS.gray,
+        flexDirection: "row"
+    })
 })
 
 export default styles;
